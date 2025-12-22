@@ -1,0 +1,20 @@
+@font-face {
+  font-family: f1;
+  src: url(../public/63cffc0a3942456e003bc265_Chillax-Regular.woff);
+}
+@font-face {
+  font-family: f2;
+  src: url(../public/63cffc20aa8997095067596f_Satoshi-Light.woff);
+}
+@font-face {
+  font-family: f3;
+  src: url(../public/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2);
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-f1: f1;
+  --font-f2: f2;
+  --font-f3: f3;
+}
