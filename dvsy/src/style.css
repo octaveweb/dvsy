@@ -2,10 +2,12 @@
   font-family: f1;
   src: url(../public/63cffc0a3942456e003bc265_Chillax-Regular.woff);
 }
+
 @font-face {
   font-family: f2;
   src: url(../public/63cffc20aa8997095067596f_Satoshi-Light.woff);
 }
+
 @font-face {
   font-family: f3;
   src: url(../public/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2);
@@ -17,4 +19,75 @@
   --font-f1: f1;
   --font-f2: f2;
   --font-f3: f3;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.herosection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding-bottom: 1rem;
+}
+
+.btn-c {
+  height: 40px;
+  width: 40px;
+  background: #ffffff13;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid #ffffff88;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  
+}
+.card-v1{
+  flex-grow: 1;
+  padding: 2rem 1.5rem;
+  color: #fff;
+}
+.card-v1 h3{
+  font-size: 20px;
+  font-family: f2;
+
+}
+.card-v1 > p{
+padding: 1rem 0 2rem;
+color: #ffffff70;
+}
+.card-v1 > button{
+opacity: 70%;
+}
+
+.card-v2{
+  display: flex;
+  flex-flow: column;
+  /* text-align: center; */
+  flex-grow: 1;
+  color: #fff;
+}
+
+.card-v2 h2{
+  font-size: 3rem;
+  font-family: f2;
+}
+.card-v2 p{
+    font-size: 1rem;
+    font-family: f3;
+    line-height: 10px;
+    color: #ffffff75;
+}
+.card-v2 .center{
+   margin: 0 auto;
 }
