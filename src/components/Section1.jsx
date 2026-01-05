@@ -2,6 +2,7 @@
 function Section1() {
   return (
     <div className="section1 px-5 ">
+
         <div className="h-[93vh] bg-[url(../public/model.png)] bg-center bg-no-repeat bg-cover rounded-md p-12 flex justify-between  ">
         <div className="herosection">
           <div className=" text-white ">
@@ -17,6 +18,7 @@ function Section1() {
         </button>
         </div>
       </div>
+
     </div>
   )
 }

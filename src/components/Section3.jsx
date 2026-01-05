@@ -27,6 +27,7 @@ const Section3 = () => {
       {stats.map((elm, idx) => {
         return <CardV2 key={idx} data={elm} />
       })}
+
     </div>
   )
 }

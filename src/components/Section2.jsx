@@ -28,7 +28,7 @@ const Section2 = () => {
 
 
     return (
-        <div className='flex items-center gap-4 py-5 px-5'>
+        <div className='grid grid-cols-4  items-center gap-4 py-5 px-5'>
             {features.map((elm, idx) => {
                return <CardV1 key={idx} data={elm} />
             })}

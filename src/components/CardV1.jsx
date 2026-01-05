@@ -7,7 +7,7 @@ const CardV1 = ({data}) => {
         <p>{data.description}</p>
          <button className=" text-white cursor-pointer" >
             <div className='flex justify-between items-center gap-3'>
-                <i className="ri-arrow-down-line btn-c" ></i>
+              <i class="ri-arrow-right-up-line btn-c"></i>
                 <p className="uppercase">Learn More</p>
             </div>
         </button>
