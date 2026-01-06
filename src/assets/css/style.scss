@@ -1,0 +1,430 @@
+@font-face {
+  font-family: f1;
+  src: url(../fonts/63cffc0a3942456e003bc265_Chillax-Regular.woff);
+}
+
+@font-face {
+  font-family: f2;
+  src: url(../fonts/63cffc20aa8997095067596f_Satoshi-Light.woff);
+}
+
+@font-face {
+  font-family: f3;
+  src: url(../fonts/L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2);
+}
+
+/* ================= Variables ================= */
+/* Colors */
+$bg-primary-color: #000;
+$bg-secondary-color: #1a1a1a;
+$bg-fill-color: #fafafa;
+$bg-food-color: #cb2929;
+$bg-accent-color: #1e90ff;
+
+$text-primary-color: #fff;
+$text-secondary-color: #b3b3b3;
+$text-muted-color: #777;
+$text-invert-color: #000;
+
+$border-primary-color: #333;
+$border-light-color: #444;
+$border-focus-color: #1e90ff;
+
+/* Spacing */
+$space-2xs: .125rem;
+$space-xs: .25rem;
+$space-sm: .5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-2xl: 2.5rem;
+$space-3xl: 4rem;
+$space-4xl: 6rem;
+
+/* Radius */
+$border-radius-xs: .25rem;
+$border-radius-sm: .5rem;
+$border-radius-md: 1rem;
+$border-radius-lg: 1.5rem;
+$border-radius-xl: 2rem;
+$border-radius-2xl: 2.5rem;
+$border-radius-3xl: 4rem;
+$border-radius-round: 999px;
+
+/* Typography */
+$font-primary: "Inter", system-ui, sans-serif;
+$font-secondary: "Poppins", sans-serif;
+$font-mono: "JetBrains Mono", monospace;
+
+/* Shadows */
+$shadow-xs: 0 1px 2px rgba(0, 0, 0, .15);
+$shadow-sm: 0 2px 6px rgba(0, 0, 0, .2);
+$shadow-md: 0 6px 20px rgba(0, 0, 0, .25);
+$shadow-lg: 0 12px 40px rgba(0, 0, 0, .35);
+
+/* Transitions */
+$transition-fast: .15s ease;
+$transition-normal: .3s ease;
+$transition-slow: .6s ease;
+
+/* Z-index */
+$z-base: 1;
+$z-dropdown: 10;
+$z-sticky: 50;
+$z-modal: 100;
+$z-toast: 999;
+
+/* Layout */
+$container-sm: 640px;
+$container-md: 768px;
+$container-lg: 1024px;
+$container-xl: 1280px;
+
+/* Blocks */
+$block-xs: 1.5rem;
+$block-sm: 2rem;
+$block-md: 3rem;
+$block-lg: 4rem;
+
+/* Font Sizes */
+$fs-2xs: 0.625rem; // 10px
+$fs-xs: 0.75rem; // 12px
+$fs-sm: 0.875rem; // 14px
+$fs-md: 1rem; // 16px
+$fs-lg: 1.125rem; // 18px
+$fs-xl: 1.25rem; // 20px
+$fs-2xl: 1.5rem; // 24px
+$fs-3xl: 2rem; // 32px
+$fs-4xl: 2.5rem; // 40px
+$fs-5xl: 3rem; // 48px
+
+
+
+
+/* ================= Mixins ================= */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin glass($blur: 4px) {
+  background: #ffffff13;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border: 1px solid #ffffff88;
+}
+
+/* ================= Base ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: #111;
+}
+
+
+
+
+
+
+
+.btn-c {
+  height: 40px;
+  width: 40px;
+  color: $text-primary-color;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 30px #0000001a;
+
+  @include flex-center;
+  @include glass(3.9px);
+}
+
+/* ---------- Card V1 ---------- */
+.container-v1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: $space-md $space-lg;
+  align-items: stretch;
+}
+
+.card-v1 {
+  flex-grow: 1;
+  padding: 2rem 1.5rem;
+  color: $text-primary-color;
+  background-color: $bg-secondary-color;
+  border-radius: $border-radius-xs;
+
+  h3 {
+    font-size: 20px;
+    font-family: f2;
+  }
+
+  >p {
+    padding: 1rem 0 2rem;
+    color: #ffffff70;
+    font-family: f1;
+    font-size: $fs-sm;
+  }
+
+  >button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    color: $text-primary-color;
+
+    .btn-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .75rem;
+
+      span {
+        text-transform: uppercase;
+        font-size: $fs-sm;
+        font-family: f1;
+        letter-spacing: .08em;
+      }
+    }
+  }
+}
+
+/* ---------- Card V2 ---------- */
+.card-v2 {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  color: $text-primary-color;
+
+  h2 {
+    font-size: 3rem;
+    font-family: f2;
+  }
+
+  p {
+    font-size: 1rem;
+    font-family: f3;
+    line-height: 10px;
+    color: #ffffff75;
+  }
+
+  .center {
+    margin: 0 auto;
+  }
+}
+
+/* ---------- Card V3 ---------- */
+.card-v3 {
+  background-color: #1d1d1d;
+  border-radius: $border-radius-sm;
+  padding: 3rem 2.5rem;
+  color: $text-primary-color;
+
+  .titel-sm {
+    margin-bottom: 2.75rem;
+  }
+
+  .titel {
+    margin-bottom: 2.5rem;
+  }
+
+  .card-v3-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: .25rem 0;
+
+    p {
+      font-size: $fs-md;
+      font-family: f2;
+      color: $text-secondary-color;
+    }
+  }
+}
+
+/* ------- Titles ------- */
+.titel {
+  font-size: 50px;
+  line-height: 45px;
+  font-family: f1;
+
+  &-sm {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: f3;
+  }
+}
+
+/* ------------ Layout ------------ */
+
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: $fs-md $fs-lg;
+
+  .logo {
+    @include flex-center();
+    font-size: $fs-2xl;
+    color: $text-primary-color;
+    cursor: pointer;
+    font-family: f1;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: $space-xs;
+    list-style-type: none;
+
+    li {
+      padding: $fs-xs $fs-lg;
+      background-color: #1d1d1d;
+      color: $text-primary-color;
+      border-radius: $border-radius-sm;
+      font-family: f3;
+      cursor: pointer;
+      font-size: $fs-md;
+      transition: $transition-fast;
+
+      &:hover {
+        background-color: lighten(#1d1d1d, 8%);
+      }
+    }
+
+    .cta {
+      background-color: #ee6d54;
+      color: #000;
+
+      &:hover {
+        background-color: darken(#ee6d54, 6%);
+      }
+    }
+  }
+}
+
+// Section1 
+.section1 {
+  padding: 0 1.25rem;
+}
+
+.hero-bg {
+  height: 93vh;
+  background: url("../image/model.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: $border-radius-xs;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.herosection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+}
+
+.hero-text {
+  color: $text-primary-color;
+
+  h1 {
+    font-size: 6rem;
+    line-height: 1;
+    font-family: f2;
+  }
+
+  p {
+    font-size: $fs-xl;
+    width: 80%;
+    float: right;
+    padding: 1.5rem 0;
+    color: #d1d5db;
+    line-height: 40px;
+    font-family: f2;
+  }
+}
+
+.hero-btn {
+  background: none;
+  border: none;
+  color: $text-primary-color;
+  cursor: pointer;
+
+  .btn-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+
+    p {
+      text-transform: uppercase;
+      font-size: $fs-sm;
+      letter-spacing: .08em;
+    }
+  }
+}
+
+// Section3 
+.section3 {
+  width: 100%;
+  @include flex-center();
+  flex-flow: row;
+  padding: $space-3xl 1.25rem;
+}
+
+// Section4 
+.section4 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1.25rem;
+  gap: 1rem;
+}
+
+// Section5 
+.section5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding:  0 1.25rem 1rem;
+  gap: 1rem;
+
+  .card-c {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+  }
+
+  .card-v1 {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    align-items: end;
+
+    span {
+      p {
+        padding: 1rem 0 0rem;
+        color: #ffffff70;
+        font-family: f1;
+        font-size: $fs-sm;
+      }
+    }
+  }
+}

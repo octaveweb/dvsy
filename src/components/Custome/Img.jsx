@@ -5,12 +5,11 @@ const Img = (props) => {
     <div
       style={{
         backgroundImage: `url(${props.url})`,
-        height: "100%",
         width: "100%",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        borderRadius:".25rem"
       }}
-      className='rounded'
     />
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-import CardV2 from './CardV2'
+import CardV2 from '../Cards/CardV2'
 
 const Section3 = () => {
 
@@ -23,7 +23,7 @@ const Section3 = () => {
   ];
 
   return (
-    <div className=' w-full flex items-center gap-4 py-10 px-5'>
+    <div className='section3'>
       {stats.map((elm, idx) => {
         return <CardV2 key={idx} data={elm} />
       })}

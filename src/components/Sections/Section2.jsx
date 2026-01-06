@@ -1,5 +1,5 @@
 import React from 'react'
-import CardV1 from './CardV1'
+import CardV1 from '../Cards/CardV1'
 
 const Section2 = () => {
     const features = [
@@ -28,7 +28,7 @@ const Section2 = () => {
 
 
     return (
-        <div className='grid grid-cols-4  items-center gap-4 py-5 px-5'>
+        <div className='container-v1'>
             {features.map((elm, idx) => {
                return <CardV1 key={idx} data={elm} />
             })}
