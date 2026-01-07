@@ -5,7 +5,7 @@ function Section1() {
         <div className="herosection">
           <div className="hero-text">
             <h1>
-              DESIGN <br /> &nbsp;&nbsp;&nbsp; & FREEDOM
+              DESIGN <br /> &nbsp;&nbsp;&nbsp;&nbsp; & FREEDOM
             </h1>
             <p>
               Explore Independent Style by Embracing Uniqueness with Our
@@ -13,7 +13,7 @@ function Section1() {
             </p>
           </div>
 
-          <button className="hero-btn">
+          <button className="hero-btn h-btn">
             <div className="btn-inner">
               <i className="ri-arrow-down-line btn-c"></i>
               <p>Learn More</p>

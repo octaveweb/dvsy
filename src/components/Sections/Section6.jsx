@@ -19,8 +19,8 @@ const Section6 = () => {
 ];
 
     return (
-        <div className="section5">
-            <div className="card-c">
+        <div className="section5 section6">
+            <div className="card-c ">
                 {features.map((elm, idx) => {
                     return <CardV4 key={idx} data={elm} />
                 })}

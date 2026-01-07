@@ -100,7 +100,6 @@ $fs-5xl: 3rem; // 48px
 
 
 
-
 /* ================= Mixins ================= */
 @mixin flex-center {
   display: flex;
@@ -135,7 +134,33 @@ html {
 }
 
 
+.h-btn {
+  background-color: #ee6d54;
+  transition: $transition-fast;
+  cursor: pointer;
 
+  &:hover {
+    scale: 1.08;
+  }
+
+  &:active {
+    scale: 1.04;
+  }
+}
+
+.h2-btn {
+  background-color: #ee6d54;
+  transition: $transition-normal;
+  cursor: pointer;
+
+  &:hover {
+    scale: .98;
+  }
+
+  &:active {
+    scale: 1;
+  }
+}
 
 
 
@@ -400,11 +425,23 @@ html {
   gap: 1rem;
 }
 
+// Titel 
+.titel-c {
+  color: $text-primary-color;
+
+  .titel {
+    padding: $space-lg $space-3xl;
+
+  }
+}
+
+
+
 // Section5 
 .section5 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding:  0 1.25rem 1rem;
+  padding: 0 1.25rem 1rem;
   gap: 1rem;
 
   .card-c {
@@ -428,3 +465,195 @@ html {
     }
   }
 }
+
+
+
+/* Phones */
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+
+  // Navbar
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: $fs-md $fs-lg;
+
+    .nav-list {
+      display: none;
+    }
+  }
+
+  // Section1
+  .section1 {
+    padding: 0 calc($space-xs*2) 0;
+
+  }
+
+  .container-v1 {
+    .card-v1 {
+      >p {
+        padding: 1rem 0rem 1rem;
+      }
+    }
+  }
+
+  .hero-bg {
+    height: 80vh;
+  }
+
+  .herosection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: column;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+  }
+
+  .hero-text {
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: $fs-sm;
+      line-height: 17px;
+    }
+  }
+
+  .hero-btn {
+    background: none;
+    border: none;
+    color: $text-primary-color;
+    cursor: pointer;
+
+    .btn-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .75rem;
+
+      p {
+        text-transform: uppercase;
+        font-size: $fs-sm;
+        letter-spacing: .08em;
+      }
+    }
+  }
+
+  // Section2
+  .container-v1 {
+    grid-template-columns: 1fr;
+    padding: $space-sm;
+    gap: $space-sm
+  }
+
+  // Section3
+  .section3 {
+    padding: $space-2xl;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: $space-lg;
+  }
+
+  // Section4 
+  .section4 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 400px;
+    padding: $space-sm;
+    gap: $space-sm;
+
+    .titel {
+      margin-bottom: .5rem;
+      font-size: $fs-3xl;
+    }
+
+    .card-v3 {
+      .card-v3-content {
+        gap: $fs-md;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr, 2);
+      }
+    }
+  }
+
+  // Titel 
+  .titel-c {
+    color: $text-primary-color;
+
+    .titel {
+      padding: $space-lg $space-md $space-md;
+      font-size: $space-xl;
+    }
+  }
+
+  // Section5 
+  .section5 {
+    display: grid;
+    padding: 0 $space-sm $space-sm;
+    grid-template-columns: auto;
+    grid-template-rows: 400px auto;
+    gap: $space-sm;
+
+    .card-c {
+      display: flex;
+      flex-flow: column;
+      gap: $space-sm;
+
+
+      .card-v1 {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: end;
+        justify-items: start;
+        gap: 1rem;
+
+        span {
+          p {
+            padding: 1rem 0 0rem;
+            color: #ffffff70;
+            font-family: f1;
+            font-size: $fs-sm;
+          }
+        }
+      }
+    }
+  }
+
+  // Section6 
+  .section6 {
+    display: grid;
+    padding: 0 $space-sm $space-sm;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 400px;
+
+    .card-c {
+      display: flex;
+      flex-flow: column;
+      gap: $space-sm;
+    }
+
+    .card-v1 {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      align-items: end;
+
+      span {
+        p {
+          padding: 1rem 0 0rem;
+          color: #ffffff70;
+          font-family: f1;
+          font-size: $fs-sm;
+        }
+      }
+    }
+  }
+
+
+}
+
+/* Ultra wide */
+@media (min-width: 1536px) {}
